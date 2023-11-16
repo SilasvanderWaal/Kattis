@@ -1,15 +1,16 @@
 #include <stdio.h>
+#include <math.h>
 
 int main(){
-    int fb; 
-    float km;
+    double fb; 
+    double km;
 
-    scanf("%d", &fb);
-    if(fb < 1 || fb > 100000){
-        scanf("%d", &fb);
+    if(scanf("%lf", &fb) == 0 || fb < 1 || fb > 100000){
+        return 0;
     }
+
     km = fb * 0.09144;
-    printf("%f\n", km);
+    printf("%.5lf\n", km);
 
     return 0;
 }
